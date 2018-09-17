@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IKTA.Process.Deployment", "IKTA.Process.Deployment", "{3F62B3EB-E981-447B-BA47-1F2D6273061B}"
+	ProjectSection(SolutionItems) = preProject
+		IKTA.Process.Deployment\IKTA.Process.Deployment.btdfproj = IKTA.Process.Deployment\IKTA.Process.Deployment.btdfproj
+		IKTA.Process.Deployment\InstallWizard.xml = IKTA.Process.Deployment\InstallWizard.xml
+		IKTA.Process.Deployment\License.rtf = IKTA.Process.Deployment\License.rtf
+		IKTA.Process.Deployment\PortBindingsMaster.xml = IKTA.Process.Deployment\PortBindingsMaster.xml
+		IKTA.Process.Deployment\SettingsFileGenerator.xml = IKTA.Process.Deployment\SettingsFileGenerator.xml
+		IKTA.Process.Deployment\UnInstallWizard.xml = IKTA.Process.Deployment\UnInstallWizard.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IKTA.Process.Schemas", "IKTA.Process.Schemas\IKTA.Process.Schemas.btproj", "{C502F400-70D7-4F37-8D27-648E730F4197}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IKTA.Process.Orchestrations", "IKTA.Process.Orchestrations\IKTA.Process.Orchestrations.btproj", "{6598220E-7CCA-4F93-B9D4-4D3DD3AFEACC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IKTA.Process.Transforms", "IKTA.Process.Transforms\IKTA.Process.Transforms.btproj", "{7B7612F9-6D96-4C7C-9B80-3E5E22FB30EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IKTA.Process.Components", "IKTA.Process.Components\IKTA.Process.Components.csproj", "{9750CEDB-70E8-482E-93B1-0D2D0F81549A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IKTA-Process.WcfServices", "IKTA-Process.WcfServices", "{6336CD63-A6D4-4C11-A62B-A99437582842}"
+	ProjectSection(SolutionItems) = preProject
+		IKTA.Process.WCFServices\Fakturaer_Vigilo.svc = IKTA.Process.WCFServices\Fakturaer_Vigilo.svc
+		IKTA.Process.WCFServices\App_Data\SchemaIndex.xml = IKTA.Process.WCFServices\App_Data\SchemaIndex.xml
+		IKTA.Process.WCFServices\App_Data\Serialization.xsd = IKTA.Process.WCFServices\App_Data\Serialization.xsd
+		IKTA.Process.WCFServices\App_Data\ServiceDescription.xml = IKTA.Process.WCFServices\App_Data\ServiceDescription.xml
+		IKTA.Process.WCFServices\Web.config = IKTA.Process.WCFServices\Web.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Swagger", "Swagger", "{82E358F8-D698-4924-9142-50B9EB172C3C}"
+	ProjectSection(SolutionItems) = preProject
+		IKTA.Process.WCFServices\Swagger\favicon-16x16.png = IKTA.Process.WCFServices\Swagger\favicon-16x16.png
+		IKTA.Process.WCFServices\Swagger\favicon-32x32.png = IKTA.Process.WCFServices\Swagger\favicon-32x32.png
+		IKTA.Process.WCFServices\Swagger\index.html = IKTA.Process.WCFServices\Swagger\index.html
+		IKTA.Process.WCFServices\Swagger\oauth2-redirect.html = IKTA.Process.WCFServices\Swagger\oauth2-redirect.html
+		IKTA.Process.WCFServices\Swagger\swagger-ui-bundle.js = IKTA.Process.WCFServices\Swagger\swagger-ui-bundle.js
+		IKTA.Process.WCFServices\Swagger\swagger-ui-bundle.js.map = IKTA.Process.WCFServices\Swagger\swagger-ui-bundle.js.map
+		IKTA.Process.WCFServices\Swagger\swagger-ui-standalone-preset.js = IKTA.Process.WCFServices\Swagger\swagger-ui-standalone-preset.js
+		IKTA.Process.WCFServices\Swagger\swagger-ui-standalone-preset.js.map = IKTA.Process.WCFServices\Swagger\swagger-ui-standalone-preset.js.map
+		IKTA.Process.WCFServices\Swagger\swagger-ui.css = IKTA.Process.WCFServices\Swagger\swagger-ui.css
+		IKTA.Process.WCFServices\Swagger\swagger-ui.css.map = IKTA.Process.WCFServices\Swagger\swagger-ui.css.map
+		IKTA.Process.WCFServices\Swagger\swagger-ui.js = IKTA.Process.WCFServices\Swagger\swagger-ui.js
+		IKTA.Process.WCFServices\Swagger\swagger-ui.js.map = IKTA.Process.WCFServices\Swagger\swagger-ui.js.map
+		IKTA.Process.WCFServices\Swagger\swagger.json = IKTA.Process.WCFServices\Swagger\swagger.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C502F400-70D7-4F37-8D27-648E730F4197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C502F400-70D7-4F37-8D27-648E730F4197}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C502F400-70D7-4F37-8D27-648E730F4197}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C502F400-70D7-4F37-8D27-648E730F4197}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C502F400-70D7-4F37-8D27-648E730F4197}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C502F400-70D7-4F37-8D27-648E730F4197}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6598220E-7CCA-4F93-B9D4-4D3DD3AFEACC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6598220E-7CCA-4F93-B9D4-4D3DD3AFEACC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6598220E-7CCA-4F93-B9D4-4D3DD3AFEACC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6598220E-7CCA-4F93-B9D4-4D3DD3AFEACC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6598220E-7CCA-4F93-B9D4-4D3DD3AFEACC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6598220E-7CCA-4F93-B9D4-4D3DD3AFEACC}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7B7612F9-6D96-4C7C-9B80-3E5E22FB30EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B7612F9-6D96-4C7C-9B80-3E5E22FB30EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B7612F9-6D96-4C7C-9B80-3E5E22FB30EB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7B7612F9-6D96-4C7C-9B80-3E5E22FB30EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B7612F9-6D96-4C7C-9B80-3E5E22FB30EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B7612F9-6D96-4C7C-9B80-3E5E22FB30EB}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{9750CEDB-70E8-482E-93B1-0D2D0F81549A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9750CEDB-70E8-482E-93B1-0D2D0F81549A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9750CEDB-70E8-482E-93B1-0D2D0F81549A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9750CEDB-70E8-482E-93B1-0D2D0F81549A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{82E358F8-D698-4924-9142-50B9EB172C3C} = {6336CD63-A6D4-4C11-A62B-A99437582842}
+	EndGlobalSection
+EndGlobal

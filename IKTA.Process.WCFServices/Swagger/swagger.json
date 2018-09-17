@@ -1,0 +1,222 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Dokumentasjon på IKT-Agders grensesnitt for fakturering.",
+    "version" : "1.1.0",
+    "title": "IKT-Agder"
+  },
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/fakturaer_Vigilo.svc" : {
+      "put" : {
+        "summary" : "Legg til nye fakturaer ",
+        "parameters" : [ {
+          "name" : "sendFakturering",
+          "description" : "Fakturaer blir oversendt økonomisystem for behandling.",
+          "in" : "body",
+          "schema" : {
+            "$ref" : "#/definitions/Fakturaer"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK"
+          },
+          "400" : {
+            "description" : "Bad request"
+          },
+          "403" : {
+            "description" : "Unauthorized"
+          }
+        }
+      }
+    }
+  },
+  "securityDefinitions" : {
+    "APISecurity" : {
+      "type" : "apiKey",
+      "name" : "X-Authorization-Key",
+      "in" : "header"
+    }
+  },
+  "security" : [ {
+    "APISecurity" : [ ]
+  } ],
+  "definitions" : {
+    "Adresse" : {
+      "type" : "object",
+      "properties" : {
+        "AdresseLinje" : {
+          "type" : "array",
+          "description" : "Adresseinformasjon",
+          "items" : {
+            "type" : "string"
+          },
+          "example" : "Oppunder Fjell"
+        },
+        "PostNummer" : {
+          "type" : "string",
+          "example" : "4747",
+          "description" : "Postnummer"
+        },
+        "PostSted" : {
+          "type" : "string",
+          "example" : "Valle",
+          "description" : "Poststed"
+        },
+        "Land" : {
+          "type" : "string",
+          "example" : "NO",
+          "description" : "Landkode"
+        }
+      }
+    },
+    "Fakturaer" : {
+      "type" : "object",
+      "required" : [ "FraSystem" ],
+      "properties" : {
+        "FraSystem" : {
+          "type" : "string",
+          "description" : "System som er avsender av fakturaene.",
+          "example" : "Vigilo"
+        },
+        "AntallFakturaer" : {
+          "type" : "integer",
+          "example" : "1"
+        },
+        "TotaltFakturert" : {
+          "type" : "number",
+          "example" : "2730"
+        },
+        "Faktura" : {
+          "type" : "array",
+          "items" : {
+            "properties" : {
+              "Firma" : {
+                "type" : "string",
+                "description" : "Kode som spesifiserer en organisatorisk enhet.",
+                "example" : "13126"
+              },
+              "Transaksjonsdato" : {
+                "type" : "string",
+                "format" : "date",
+                "description" : "Dato for når fakturaen ble oversendt.",
+                "example" : "2017-08-11"
+              },
+              "Ordre" : {
+                "type" : "object",
+                "properties" : {
+                  "EksterntOrdreNummer" : {
+                    "type" : "string",
+                    "description" : "Ordrenummer fra eksternt system.",
+                    "example" : "040061823"
+                  },
+                  "OrdreLinje" : {
+                    "type" : "array",
+                    "description" : "Liste av ordelinjer.",
+                    "items" : {
+                      "properties" : {
+                        "LinjeNummer" : {
+                          "type" : "integer",
+                          "description" : "Løpenummer internt for ordre. Benyttes for sortering av ordrelinjer på faktura.",
+                          "example" : "1"
+                        },
+                        "Produkt" : {
+                          "type" : "string",
+                          "description" : "Kode som spesifiserer hvilket produkt som omhandles.",
+                          "example" : "7010341"
+                        },
+                        "Beskrivelse" : {
+                          "type" : "string",
+                          "description" : "Tekstbeskrivelse som skal inn i faktura for denne ordrelinje.",
+                          "example" : "Fulltidsplass Solstrand barnehage"
+                        },
+                        "Antall" : {
+                          "type" : "number",
+                          "description" : "Kan være negativt ved tilbakebetaling.",
+                          "example" : "1"
+                        },
+                        "Enhet" : {
+                          "type" : "string",
+                          "description" : "Benvenelse av enhet."
+                        },
+                        "EnhetsPris" : {
+                          "type" : "number",
+                          "description" : "Pris pr enhet.",
+                          "example" : "2730"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "RessursNummer" : {
+                "type" : "string",
+                "description" : "Referanse til behandlende enhet i kommunen.",
+                "example" : "83514"
+              },
+              "Gbnr" : {
+                "type" : "string",
+                "description" : "Gårds og bruksnummer."
+              },
+              "TjenesteType" : {
+                "type" : "string",
+                "description" : "70"
+              },
+              "FakturaMottaker" : {
+                "type" : "object",
+                "properties" : {
+                  "FNr_OrgNr": {
+                    "type": "string",
+                    "description": "Fødselsnummer/DUXnummer  eller organisasjonsnummer",
+                    "example": "03118398765"
+                  },
+                  "Fornavn": {
+                    "type": "string",
+                    "description": "Fornavn på fakturamottaker",
+                    "example": "Anne"
+                  },
+                  "Etternavn" : {
+                    "type" : "string",
+                    "description" : "Etternavn på fakturamottaker",
+                    "example" : "Knutsdotter"
+                  },
+                  "Adresse" : {
+                    "$ref" : "#/definitions/Adresse"
+                  },
+                  "FakturaAdresse" : {
+                    "$ref" : "#/definitions/Adresse"
+                  }
+                }
+              },
+              "FakturaBeskrivelse" : {
+                "type" : "object",
+                "properties" : {
+                  "ToppTekst1" : {
+                    "type" : "string",
+                    "description" : "Tekst som vil komme som variabel topptekst på faktura.",
+                    "example" : "Betaling for perioden Februar 2018"
+                  },
+                  "ToppTekst2" : {
+                    "type" : "string",
+                    "description" : "Navn på template brukt som topptekst å faktura."
+                  },
+                  "BunnTekst1" : {
+                    "type" : "string",
+                    "description" : "Tekst som vil komme som variabel bunntekst på faktura."
+                  },
+                  "BunnTekst2" : {
+                    "type" : "string",
+                    "description" : "Navn på template brukt som bunntekst å faktura."
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+  },
+  "host" : "localhost",
+  "basePath" : "/api"
+}

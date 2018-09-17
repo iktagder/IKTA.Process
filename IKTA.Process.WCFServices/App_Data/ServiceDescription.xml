@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BtsServiceDescription xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="BizTalkWcfService" TargetNamespace="http://tempuri.org/" xmlns="http://schemas.microsoft.com/BizTalk/2006/01/Adapters/WCF/Publishing">
+  <Description />
+  <MessageType Name="#" FileName=".\.xsd">
+    <Description>, </Description>
+  </MessageType>
+  <!--Service Name="Service1">
+    <PortType Name="Service1">
+      <Operation Name="Operation1" MethodName="Operation1">
+        <Input Name="Request" MessageType="#" />
+      </Operation>
+    </PortType>
+  </Service-->
+  <Service Name="Fakturaer_v1_0">
+    <PortType Name="Fakturaer_v1_0">
+      <Operation Name="Fakturaer" MethodName="Fakturaer">
+        <Input Name="Request" MessageType="#" />
+      </Operation>
+    </PortType>
+  </Service>
+  <Service Name="Fakturaer_Vigilo">
+    <PortType Name="Fakturaer_Vigilo">
+      <Operation Name="Fakturaer" MethodName="Fakturaer">
+        <Input Name="Request" MessageType="#" />
+      </Operation>
+    </PortType>
+  </Service>
+</BtsServiceDescription>

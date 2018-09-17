@@ -1,0 +1,102 @@
+{
+    "FraSystem": "Vigilo",
+    "Faktura": [
+      {
+        "Firma": "Grimstad", 
+        "ProdDato": "2017-08-11", 
+         "Ordre": {
+          "EksterntOrdreNummer": "040061685",
+          "OrdreLinje": [
+            {
+              "LinjeNummer": "1",
+              "Produkt": "v_7010341", 
+              "Beskrivelse": "Hausland bhg, 5 dager pr. uke, Navn på barn",
+              "Antall": "1",
+              "EnhetsPris": "2730"
+            },
+            {
+              "LinjeNummer": "2",
+              "Produkt": "v_7010391",
+              "Beskrivelse": "Fradrag I, navn på barn",
+              "Antall": "-1",
+              "EnhetsPris": "121"
+            },
+            {
+              "LinjeNummer": "3",
+              "ProduktKode": "v_7010399",
+              "Beskrivelse": "Kost navn på barn",
+              "Antall": "1",
+              "EnhetsPris": "262"
+            }
+          ]
+        },
+        "RessursNummer": "12345Ressurs",
+        "FakturaMottaker": {
+          "FNR_OrgNr": "01027524724",
+          "Navn": "Mors navn",
+          "Adresse": {
+            "AdresseLinje": [
+              "Veste Molia 17",
+              "Andre etasje"
+            ],
+            "PostNummer": "4872",
+            "PostSted": "Fevik"
+          }
+        },
+        "FakturaBeskrivelse": {
+          "ToppTekst1": "Første linje i header",
+          "ToppTekst2": "Andre linje i header",
+          "BunnTekst1": "Første linje i footer",
+          "BunnTekst2": "Andre linje i footer"
+        }
+      },
+      {
+        "Firma": "Grimstad",
+        "ProdDato": "2017-08-11",
+        "Ordre": {
+          "OrdreNummer": "040061141",
+          "OrdreLinje": [
+            {
+              "LinjeNummer": "1",
+              "Produkt": "7010441",
+              "Beskrivelse": "Tønnevoldskogen bhg, 5 dager pr uke, Navn på barn",
+              "Antall": "1",
+              "Enhet": "mnd",
+              "EnhetsPris": "2730"
+            },
+            {
+              "LinjeNummer": "2",
+              "Produkt": "7010499",
+              "Beskrivelse": "Kost Navn på barn",
+              "Antall": "1",
+              "Enhet": "Måned",
+              "EnhetsPris": "262"
+            }
+          ]
+        },
+        "FakturaMottaker": {
+          "FNR_OrgNr": "01037313579",
+          "Navn": "Fars Navn",
+          "Adresse": {
+            "AdresseLinje": "Åsdalen 13",
+            "PostNummer": "4878",
+            "PostSted": "Fevik"
+          },
+          "FaktureringsAdresse": {
+            "AdresseLinje": [
+              "AndreÅsdalen 13",
+              "Bortenfor sånn"
+            ],
+            "PostNummer": "1234",
+            "PostSted": "Ålvik"
+          }
+        },
+        "FakturaBeskrivelse": {
+          "ToppTekst1": "Første linje i header",
+          "ToppTekst2": "Andre linje i header",
+          "BunnTekst1": "Første linje i footer",
+          "BunnTekst2": "Andre linje i footer"
+        }
+      }
+    ]
+  }

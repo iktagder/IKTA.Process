@@ -1,0 +1,92 @@
+<ns0:Fakturaer xmlns:ns0="http://IKTA.Common.Schemas.Internal.Fakturaer">
+	<FraSystem>Vigilo</FraSystem>
+	<Faktura>
+		<Firma>0904</Firma>
+		<TransaksjonsDato>2017-08-11</TransaksjonsDato>
+		<Ordre>
+			<EksterntOrdreNummer>040061685</EksterntOrdreNummer>
+			<OrdreLinje>
+				<LinjeNummer>1</LinjeNummer>
+				<Produkt>090420010517010641</Produkt>
+				<Beskrivelse>Oppholdsbetaling Eide barnehage</Beskrivelse>
+				<Antall>1</Antall>
+				<EnhetsPris>2730</EnhetsPris>
+			</OrdreLinje>
+			<OrdreLinje>
+				<LinjeNummer>2</LinjeNummer>
+				<Produkt>090420010517010699</Produkt>
+				<Beskrivelse>Kost Eide barnehage</Beskrivelse>
+				<Antall>-1</Antall>
+				<EnhetsPris>121</EnhetsPris>
+			</OrdreLinje>
+			<OrdreLinje>
+				<LinjeNummer>3</LinjeNummer>
+				<Produkt>090420010517010656</Produkt>
+				<Beskrivelse>Søskenmoderasjon Eide barnehage</Beskrivelse>
+				<Antall>1</Antall>
+				<EnhetsPris>262</EnhetsPris>
+			</OrdreLinje>
+		</Ordre>
+		<RessursNummer>12345Ressurs</RessursNummer>
+		<FakturaMottaker>
+			<FNr_OrgNr>01027524724</FNr_OrgNr>
+			<Navn>Mors navn</Navn>
+			<Adresse>
+				<AdresseLinje>Veste Molia 17</AdresseLinje>
+				<AdresseLinje>Andre etasje</AdresseLinje>
+				<PostNummer>4872</PostNummer>
+				<PostSted>Fevik</PostSted>
+			</Adresse>
+		</FakturaMottaker>
+		<FakturaBeskrivelse>
+			<ToppTekst>Første linje i header</ToppTekst>
+			<ToppTekstMal>Andre linje i header</ToppTekstMal>
+			<BunnTekst>Første linje i footer</BunnTekst>
+			<BunnTekstMal>Andre linje i footer</BunnTekstMal>
+		</FakturaBeskrivelse>
+	</Faktura>
+	<Faktura>
+		<Firma>0904</Firma>
+		<TransaksjonsDato>2017-08-11</TransaksjonsDato>
+		<Ordre>
+			<EksterntOrdreNummer>040061141</EksterntOrdreNummer>
+			<OrdreLinje>
+				<LinjeNummer>1</LinjeNummer>
+				<Produkt>090420010517010691</Produkt>
+				<Beskrivelse>Redusert foreldrebetaling Eide barnehage</Beskrivelse>
+				<Antall>1</Antall>
+				<Enhet>mnd</Enhet>
+				<EnhetsPris>2730</EnhetsPris>
+			</OrdreLinje>
+			<OrdreLinje>
+				<LinjeNummer>2</LinjeNummer>
+				<Produkt>090420010517010691</Produkt>
+				<Beskrivelse>Gratis kjernetid Eide barnehage</Beskrivelse>
+				<Antall>1</Antall>
+				<Enhet>Måned</Enhet>
+				<EnhetsPris>262</EnhetsPris>
+			</OrdreLinje>
+		</Ordre>
+		<FakturaMottaker>
+			<FNr_OrgNr>01037313579</FNr_OrgNr>
+			<Navn>Fars Navn</Navn>
+			<Adresse>
+				<AdresseLinje>Åsdalen 13</AdresseLinje>
+				<PostNummer>4878</PostNummer>
+				<PostSted>Fevik</PostSted>
+			</Adresse>
+			<FaktureringsAdresse>
+				<AdresseLinje>AndreÅsdalen 13</AdresseLinje>
+				<AdresseLinje>Bortenfor sånn</AdresseLinje>
+				<PostNummer>1234</PostNummer>
+				<PostSted>Ålvik</PostSted>
+			</FaktureringsAdresse>
+		</FakturaMottaker>
+		<FakturaBeskrivelse>
+			<ToppTekst>Første linje i header</ToppTekst>
+			<ToppTekstMal>Andre linje i header</ToppTekstMal>
+			<BunnTekst>Første linje i footer</BunnTekst>
+			<BunnTekstMal>Andre linje i footer</BunnTekstMal>
+		</FakturaBeskrivelse>
+	</Faktura>
+</ns0:Fakturaer>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+  Deployment Framework for BizTalk
+  Copyright (C) Thomas F. Abraham, Scott Colestock
+-->
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Installer">
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Debug</Configuration>
+    <Platform Condition="'$(Platform)' == ''">x86</Platform>
+    <SchemaVersion>1.0</SchemaVersion>
+    <ProjectName>IKTA.Process</ProjectName>
+    <ProjectVersion>1.0</ProjectVersion>
+    <IncludeSchemas>True</IncludeSchemas>
+    <IncludeOrchestrations>True</IncludeOrchestrations>
+    <IncludeTransforms>True</IncludeTransforms>
+    <IncludePipelines>False</IncludePipelines>
+    <IncludeComponents>False</IncludeComponents>
+    <IncludePipelineComponents>False</IncludePipelineComponents>
+    <IncludeCustomFunctoids>False</IncludeCustomFunctoids>
+    <IncludeVocabAndRules>False</IncludeVocabAndRules>
+    <IncludeVirtualDirectories>True</IncludeVirtualDirectories>
+    <IISMetabasePath>IIS://localhost/w3svc/3/Root</IISMetabasePath>
+    <IncludeMessagingBindings>True</IncludeMessagingBindings>
+    <IncludeDeploymentTest>False</IncludeDeploymentTest>
+    <Includelog4net>False</Includelog4net>
+    <IncludeSSO>True</IncludeSSO>
+    <IncludeEsbItineraries>False</IncludeEsbItineraries>
+    <IncludeBam>False</IncludeBam>
+    <IncludeInstallUtilForComponents>False</IncludeInstallUtilForComponents>
+    <UsingMasterBindings>True</UsingMasterBindings>
+    <RequireXmlPreprocessDirectives>True</RequireXmlPreprocessDirectives>
+    <ApplyXmlEscape>True</ApplyXmlEscape>
+    <IncludeSettingsSpreadsheetInMsi>True</IncludeSettingsSpreadsheetInMsi>
+    <SkipIISReset>False</SkipIISReset>
+    <SkipHostInstancesRestart>False</SkipHostInstancesRestart>
+    <StartApplicationOnDeploy>True</StartApplicationOnDeploy>
+    <EnableAllReceiveLocationsOnDeploy>True</EnableAllReceiveLocationsOnDeploy>
+    <StartReferencedApplicationsOnDeploy>True</StartReferencedApplicationsOnDeploy>
+    <UseIsolatedAppDomain>False</UseIsolatedAppDomain>
+    <EnableBizTalkExtendedLogging>False</EnableBizTalkExtendedLogging>
+    <EnableBizTalkAssemblyValidation>False</EnableBizTalkAssemblyValidation>
+    <EnableBizTalkCorrelationValidation>False</EnableBizTalkCorrelationValidation>
+    <EnableBizTalkSchemaValidation>False</EnableBizTalkSchemaValidation>
+    <IISMetabasePath>IIS://localhost/w3svc/1/Root</IISMetabasePath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <!-- Properties related to building an MSI for server deployments -->
+    <!-- BizTalk App Version Upgrade -->
+    <!--   For each new product release to be deployed to your BizTalk servers: -->
+    <!--     1) Increment ProductVersion -->
+    <!--     2) Generate a new GUID and update ProductId with the new GUID -->
+    <!--   This allows the new MSI to automatically uninstall (not undeploy!) the old MSI and install the new one. -->
+    <ProductVersion>1.0.0</ProductVersion>
+    <ProductId>3be15602-d033-41e1-983a-4ffa6299a686</ProductId>
+    <!-- BizTalk App Version Upgrade -->
+    <ProductName>IKTA.Process $(ProductVersion)</ProductName>
+    <Manufacturer>Deployment Framework User</Manufacturer>
+    <PackageDescription>IKTA.Process</PackageDescription>
+    <!-- NEVER change the ProductUpgradeCode. -->
+    <ProductUpgradeCode>51ba1fba-76c0-46ca-befd-a3dc72d7f569</ProductUpgradeCode>
+  </PropertyGroup>
+  <!-- Under TFS Team Build, set CustomizableOutDir property to true in TFS 2005/2008/2010 UpgradeTemplate. -->
+  <!-- With a workflow build, copy the default template then modify the MSBuild task for the solution build. Set OutDir to blank and -->
+  <!-- CommandLineArguments to String.Format("/p:SkipInvalidConfigurations=true;TeamBuildOutDir=""{0}"" {1}", BinariesDirectory, MSBuildArguments). -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <DeploymentFrameworkTargetsPath>$(MSBuildExtensionsPath)\DeploymentFrameworkForBizTalk\5.0\</DeploymentFrameworkTargetsPath>
+    <OutputPath Condition="'$(TeamBuildOutDir)' == ''">bin\Debug\</OutputPath>
+    <OutputPath Condition="'$(TeamBuildOutDir)' != ''">$(TeamBuildOutDir)</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <DeploymentFrameworkTargetsPath>$(MSBuildExtensionsPath)\DeploymentFrameworkForBizTalk\5.0\</DeploymentFrameworkTargetsPath>
+    <OutputPath Condition="'$(TeamBuildOutDir)' == ''">bin\Release\</OutputPath>
+    <OutputPath Condition="'$(TeamBuildOutDir)' != ''">$(TeamBuildOutDir)</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Server'">
+    <DeploymentFrameworkTargetsPath>Framework\</DeploymentFrameworkTargetsPath>
+    <!-- Get our PDBs into the GAC so we get file/line number information in stack traces. -->
+    <DeployPDBsToGac>false</DeployPDBsToGac>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppsToReference Include="IKTA.Common" />
+  </ItemGroup>
+  <ItemGroup>
+    <PropsFromEnvSettings Include="SsoAppUserGroup;SsoAppAdminGroup" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Orchestrations Include="$(ProjectName).Orchestrations.dll">
+      <LocationPath>..\$(ProjectName).Orchestrations\bin\$(Configuration)</LocationPath>
+    </Orchestrations>
+  </ItemGroup>
+
+
+  <!-- Deployment of WCF services -->
+  <ItemGroup>
+    <VDirList Include="*">
+      <Vdir>api</Vdir>
+      <Physdir>..\IKTA.Process.WCFServices</Physdir>
+      <AppPool>BizTalkHTTPAppPool</AppPool>
+      <AppPoolNetVersion>v4.0</AppPoolNetVersion>
+    </VDirList>
+  </ItemGroup>
+  
+  <!-- !!! TODO !!! -->
+  <Import Project="$(DeploymentFrameworkTargetsPath)BizTalkDeploymentFramework.targets" />
+  <!--
+    The Deployment Framework automatically packages most files into the server install MSI.
+    However, if there are special folders that you need to include in the MSI, you can
+    copy them to the folder $(RedistDir) in the CustomRedist target.
+    To include individual files, add an ItemGroup with AdditionalFiles elements.
+  -->
+  <Target Name="CustomRedist">
+  </Target>
+</Project>
