@@ -14,8 +14,8 @@
   <RemovePersonalInformation/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>2790</WindowHeight>
-  <WindowWidth>9390</WindowWidth>
+  <WindowHeight>10050</WindowHeight>
+  <WindowWidth>22950</WindowWidth>
   <WindowTopX>0</WindowTopX>
   <WindowTopY>0</WindowTopY>
   <ProtectStructure>False</ProtectStructure>
@@ -53,7 +53,7 @@
   </Style>
  </Styles>
  <Worksheet ss:Name="Settings">
-  <Table ss:ExpandedColumnCount="6" ss:ExpandedRowCount="17" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="6" ss:ExpandedRowCount="25" x:FullColumns="1"
    x:FullRows="1">
    <Column ss:StyleID="s63" ss:AutoFitWidth="0" ss:Width="161.25"/>
    <Column ss:AutoFitWidth="0" ss:Width="161.25" ss:Span="4"/>
@@ -161,6 +161,54 @@
     <Cell><Data ss:Type="String">C:\FileDrops\IKTA.Xledger\Out\SO01b\0919\%MessageId%.csv</Data></Cell>
    </Row>
    <Row>
+    <Cell><Data ss:Type="String">FileDrop_SO001b_RIS_Address</Data></Cell>
+    <Cell><Data ss:Type="String">C:\FileDrop\IKTA.Xledger\Out\SO01b\RIS\%MessageId%.csv</Data></Cell>
+    <Cell ss:Index="5"><Data ss:Type="String">C:\FileDrop\IKTA.Xledger\Out\SO01b\RIS\%MessageId%.csv</Data></Cell>
+    <Cell><Data ss:Type="String">C:\FileDrop\IKTA.Xledger\Out\SO01b\RIS\%MessageId%.csv</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FileDrop_SO001b_TVE_Address</Data></Cell>
+    <Cell><Data ss:Type="String">C:\FileDrop\IKTA.Xledger\Out\SO01b\TVE\%MessageId%.csv</Data></Cell>
+    <Cell ss:Index="5"><Data ss:Type="String">C:\FileDrop\IKTA.Xledger\Out\SO01b\TVE\%MessageId%.csv</Data></Cell>
+    <Cell><Data ss:Type="String">C:\FileDrop\IKTA.Xledger\Out\SO01b\TVE\%MessageId%.csv</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FileDrop_SO001b_GJE_Address</Data></Cell>
+    <Cell><Data ss:Type="String">C:\FileDrop\IKTA.Xledger\Out\SO01b\GJE\%MessageId%.csv</Data></Cell>
+    <Cell ss:Index="5"><Data ss:Type="String">C:\FileDrop\IKTA.Xledger\Out\SO01b\GJE\%MessageId%.csv</Data></Cell>
+    <Cell><Data ss:Type="String">C:\FileDrop\IKTA.Xledger\Out\SO01b\GJE\%MessageId%.csv</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FileDrop_SO001b_AML_Address</Data></Cell>
+    <Cell><Data ss:Type="String">C:\FileDrop\IKTA.Xledger\Out\SO01b\AML\%MessageId%.csv</Data></Cell>
+    <Cell ss:Index="5"><Data ss:Type="String">C:\FileDrop\IKTA.Xledger\Out\SO01b\AML\%MessageId%.csv</Data></Cell>
+    <Cell><Data ss:Type="String">C:\FileDrop\IKTA.Xledger\Out\SO01b\AML\%MessageId%.csv</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FileDrop_SO001b_VEG_Address</Data></Cell>
+    <Cell><Data ss:Type="String">C:\FileDrop\IKTA.Xledger\Out\SO01b\VEG\%MessageId%.csv</Data></Cell>
+    <Cell ss:Index="5"><Data ss:Type="String">C:\FileDrop\IKTA.Xledger\Out\SO01b\VEG\%MessageId%.csv</Data></Cell>
+    <Cell><Data ss:Type="String">C:\FileDrop\IKTA.Xledger\Out\SO01b\VEG\%MessageId%.csv</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FileDrop_SO001b_ARE_Address</Data></Cell>
+    <Cell><Data ss:Type="String">C:\FileDrop\IKTA.Xledger\Out\SO01b\ARE\%MessageId%.csv</Data></Cell>
+    <Cell ss:Index="5"><Data ss:Type="String">C:\FileDrop\IKTA.Xledger\Out\SO01b\ARE\%MessageId%.csv</Data></Cell>
+    <Cell><Data ss:Type="String">C:\FileDrop\IKTA.Xledger\Out\SO01b\ARE\%MessageId%.csv</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FileDrop_SO001b_GRI_Address</Data></Cell>
+    <Cell><Data ss:Type="String">C:\FileDrop\IKTA.Xledger\Out\SO01b\GRI\%MessageId%.csv</Data></Cell>
+    <Cell ss:Index="5"><Data ss:Type="String">C:\FileDrop\IKTA.Xledger\Out\SO01b\GRI\%MessageId%.csv</Data></Cell>
+    <Cell><Data ss:Type="String">C:\FileDrop\IKTA.Xledger\Out\SO01b\GRI\%MessageId%.csv</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FileDrop_SO001b_FRO_Address</Data></Cell>
+    <Cell><Data ss:Type="String">C:\FileDrop\IKTA.Xledger\Out\SO01b\FRO\%MessageId%.csv</Data></Cell>
+    <Cell ss:Index="5"><Data ss:Type="String">C:\FileDrop\IKTA.Xledger\Out\SO01b\FRO\%MessageId%.csv</Data></Cell>
+    <Cell><Data ss:Type="String">C:\FileDrop\IKTA.Xledger\Out\SO01b\FRO\%MessageId%.csv</Data></Cell>
+   </Row>
+   <Row>
     <Cell><Data ss:Type="String">FileDrop_SO001b_SendHandler</Data></Cell>
     <Cell><Data ss:Type="String">Snd_x64_1_Random_H</Data></Cell>
    </Row>
@@ -192,8 +240,8 @@
     </Pane>
     <Pane>
      <Number>2</Number>
-     <ActiveRow>12</ActiveRow>
-     <ActiveCol>3</ActiveCol>
+     <ActiveRow>26</ActiveRow>
+     <ActiveCol>4</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
